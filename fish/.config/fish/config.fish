@@ -4,8 +4,6 @@ if test -f /usr/share/cachyos-fish-config/cachyos-config.fish
 end
 
 # Define fish_greeting for macOS.
-if not functions -q fish_greeting
-    function fish_greeting
-        fastfetch
-    end
+function fish_greeting
+    fastfetch
 end
