@@ -131,6 +131,15 @@ later(function()
     -- Map of filetype to formatters
     -- Make sure that necessary CLI tool is available
     formatters_by_ft = { lua = { 'stylua' } },
+    -- If this is set, Conform will run the formatter on save
+    -- It will pass the table to conform.format()
+    -- This can also be a function that returns the table
+    format_on_save = {
+      -- I recommend these options
+      -- See :help conform.format for details
+      lsp_format = 'fallback',
+      timeout_ms = 500,
+    },
   })
 end)
 
